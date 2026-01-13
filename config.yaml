@@ -1,0 +1,26 @@
+menu:
+  p:
+    label: projects
+    submenu:
+      1:
+        label: "sample_project"
+        action: "open_vscode"
+        path: "/Users/sample_user/Documents/sample_project"
+  b:
+    label: "bookmarks"
+    submenu:
+      g:
+        label: "Google"
+        action: "open_url"
+        url: "https://google.com"
+  m:
+    label: "Messaging"
+    submenu:
+      t:
+        label: "Teams"
+        ation: "open_app"
+        app: "Microsoft Teams"
+      o:
+        label: "Outlook"
+        action: "open_app"
+        app: "Microsoft Outlook"
