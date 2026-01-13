@@ -51,7 +51,7 @@ def display_menu(menu: dict, breadcrumb: str = ""):
     for key, item in menu.items():
         print(f"  {BOLD}{YELLOW}{key}{RESET} -> {item['label']}")
     print(
-        f"\n {BOLD}{CYAN}b{RESET} -> back    {BOLD}{CYAN}q{RESET} -> main/quit    {BOLD}{CYAN}Q{RESET} -> quit    {BOLD}{CYAN}R{RESET} -> refresh config"
+        f"\n {BOLD}{CYAN}b{RESET} -> back    {BOLD}{CYAN}q{RESET} -> quit    {BOLD}{CYAN}R{RESET} -> refresh config"
     )
     print()
 
@@ -80,7 +80,7 @@ def navigate(menu: dict, breadcrumb: str = "", parent_stack=None, main_menu=None
         choice = readchar.readkey()
         print(choice)
 
-        if choice == "Q":
+        if choice == "q":
             sys.exit(0)
         if choice == "b":
             if parent_stack:
@@ -89,15 +89,6 @@ def navigate(menu: dict, breadcrumb: str = "", parent_stack=None, main_menu=None
             else:
                 print("Already at the main menu.")
                 continue
-        if choice == "q":
-            if not parent_stack:
-                # At main menu, exit
-                sys.exit(0)
-            else:
-                # Go back to main menu
-                while parent_stack:
-                    prev_menu, prev_breadcrumb, prev_stack = parent_stack.pop(0)
-                return prev_menu, prev_breadcrumb, prev_stack
         if choice == "R":
             # Refresh config and return to main menu
             print("Refreshing config...")
