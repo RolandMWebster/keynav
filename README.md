@@ -64,18 +64,18 @@ menu:
     label: "bookmarks"
     submenu:
       g:
-        label: "Google"
+        label: "google"
         action: "open_url"
         url: "https://google.com"
   m:
-    label: "Messaging"
+    label: "messaging apps"
     submenu:
       t:
-        label: "Teams"
+        label: "teams"
         ation: "open_app"
         app: "Microsoft Teams"
       o:
-        label: "Outlook"
+        label: "outlook"
         action: "open_app"
         app: "Microsoft Outlook"
 ```
